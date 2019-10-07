@@ -25,31 +25,23 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Oxide.Core">
-      <HintPath>..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Core.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Core.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.CSharp">
-      <HintPath>..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Oxide.MySql">
-      <HintPath>..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.MySql.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.References">
-      <HintPath>..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.References.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.References.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.Rust">
-      <HintPath>..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Rust.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Rust.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
