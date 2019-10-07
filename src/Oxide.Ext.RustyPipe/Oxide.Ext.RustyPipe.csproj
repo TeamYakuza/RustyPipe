@@ -25,23 +25,37 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseGit|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ReleaseGit\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Oxide.Core">
       <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Oxide.CSharp">
       <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Oxide.References">
       <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.References.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Oxide.Rust">
       <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Rust.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +72,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)$(TargetName).dll" "C:\rust\RustDedicated_Data\Managed\$(TargetName).dll"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetName).dll" "C:\rust\RustDedicated_Data\Managed\$(TargetName).dll"
+copy "$(TargetDir)$(TargetName).dll" "$(SolutionDir)..\RustyPipe_Build\$(TargetName).dll"</PostBuildEvent>
   </PropertyGroup>
 </Project>
