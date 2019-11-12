@@ -41,6 +41,26 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Facepunch.Network">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Facepunch.Network.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Facepunch.UnityEngine">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Facepunch.UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Ionic.Zip.Reduced.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Oxide.Core">
       <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Core.dll</HintPath>
       <Private>False</Private>
@@ -57,19 +77,67 @@
       <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Oxide.Rust.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Rust.Data">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\Rust.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\..\..\rust\RustDedicated_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Image\CustomImages.cs" />
+    <Compile Include="Image\ImageLibrary.cs" />
+    <Compile Include="Image\ImageStore.cs" />
+    <Compile Include="Image\RustyPipeImageStore.cs" />
+    <Compile Include="Image\StreamedLibrary.cs" />
+    <Compile Include="Plugin\RustyPipePlugin.cs" />
+    <Compile Include="Plugin\RustyPipePluginLoader.cs" />
+    <Compile Include="RustyPipe.cs" />
     <Compile Include="RustyPipeExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RustyPipeDebug.cs" />
+    <Compile Include="UI\IRustyPipeTheme.cs" />
+    <Compile Include="UI\RustyPipeButton.cs" />
+    <Compile Include="UI\RustyPipeContainer.cs" />
+    <Compile Include="UI\RustyPipeGridComponent.cs" />
+    <Compile Include="UI\RustyPipeHorizontalLayoutComponent.cs" />
+    <Compile Include="UI\RustyPipeHud.cs" />
+    <Compile Include="UI\RustyPipeInput.cs" />
+    <Compile Include="UI\RustyPipeLabel.cs" />
+    <Compile Include="UI\RustyPipeTheme.cs" />
+    <Compile Include="UI\RustyPipeUI.cs" />
+    <Compile Include="UI\RustyPipeUIComponent.cs" />
+    <Compile Include="UI\RustyPipeUIImage.cs" />
+    <Compile Include="UI\RustyPipeUIPanel.cs" />
+    <Compile Include="UI\RustyPipeVerticalLayoutComponent.cs" />
+    <Compile Include="World\RustyPipeWorld.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetDir)$(TargetName).dll" "C:\rust\RustDedicated_Data\Managed\$(TargetName).dll"
