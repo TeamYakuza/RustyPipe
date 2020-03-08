@@ -114,6 +114,8 @@
     <Compile Include="Image\CustomImages.cs" />
     <Compile Include="Image\ImageLibrary.cs" />
     <Compile Include="Image\ImageStore.cs" />
+    <Compile Include="Image\RustSkinItem.cs" />
+    <Compile Include="Image\RustSkinLibrary.cs" />
     <Compile Include="Image\RustyPipeImageStore.cs" />
     <Compile Include="Image\StreamedLibrary.cs" />
     <Compile Include="Plugin\RustyPipePlugin.cs" />

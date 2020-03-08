@@ -14,8 +14,8 @@ namespace Oxide.Ext.RustyPipe.Image
     {
         private ImageStore ItemThumbnails { get; set; }=new ImageStore();
         private CustomImages CustomImages { get; set; }=new CustomImages();
+        private RustSkinLibrary RustSkinLibrary { get; set; } = new RustSkinLibrary();
 
-        
         internal void Init()
         {
             CustomImages.Load();
@@ -24,6 +24,7 @@ namespace Oxide.Ext.RustyPipe.Image
         {
             ItemThumbnails.Load();
             CustomImages.Prepare();
+            RustSkinLibrary.Load();
         }
 
         /// <summary>
@@ -51,7 +52,15 @@ namespace Oxide.Ext.RustyPipe.Image
                 RustyPipeDebug.LogWarning($"Unable to store custom image: {identifier}:{url}");
             }
         }
+        public RustSkinItem GetRustSkinData(int skinId)
+        {
+            return RustSkinLibrary.GetSkinData(skinId);
+        }
 
+        public string GetRustSkinUrl(int skinId)
+        {
+            return RustSkinLibrary.GetImageUrl(skinId);
+        }
         public bool HasImage(string identifier)
         {
             if (CustomImages.GetImage(identifier) > 0) return true;
