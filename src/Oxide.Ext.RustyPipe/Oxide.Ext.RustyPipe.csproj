@@ -61,6 +61,7 @@
       <HintPath>C:\rustserver\RustDedicated_Data\Managed\Ionic.Zip.Reduced.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
     <Reference Include="Oxide.Core">
       <HintPath>C:\rustserver\RustDedicated_Data\Managed\Oxide.Core.dll</HintPath>
       <Private>False</Private>
@@ -140,7 +141,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)$(TargetName).dll" "C:\rust\RustDedicated_Data\Managed\$(TargetName).dll"
+    <PostBuildEvent>copy "$(TargetDir)$(TargetName).dll" "C:\rustserver\RustDedicated_Data\Managed\$(TargetName).dll"
 copy "$(TargetDir)$(TargetName).dll" "$(SolutionDir)..\RustyPipe_Build\$(TargetName).dll"</PostBuildEvent>
   </PropertyGroup>
 </Project>
