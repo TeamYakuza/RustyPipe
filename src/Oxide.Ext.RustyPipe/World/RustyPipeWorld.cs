@@ -11,7 +11,10 @@ namespace Oxide.Ext.RustyPipe.World
 {
     public class RustyPipeWorld
     {
-
+        /// <summary>
+        /// Set the world time.
+        /// </summary>
+        /// <param name="time"></param>
         public void SetTime(DateTime time)
         {
             if (TOD_Sky.Instance != null)
@@ -19,6 +22,10 @@ namespace Oxide.Ext.RustyPipe.World
                 TOD_Sky.Instance.Cycle.DateTime = time;
             }
         }
+        /// <summary>
+        /// Set the world time by the hour.
+        /// </summary>
+        /// <param name="hour"></param>
         public void SetTime(int hour)
         {
             if (TOD_Sky.Instance != null)
