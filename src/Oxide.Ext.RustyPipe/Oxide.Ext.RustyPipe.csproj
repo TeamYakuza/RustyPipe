@@ -53,6 +53,9 @@
       <HintPath>C:\rustserver\RustDedicated_Data\Managed\Facepunch.Network.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>C:\rustserver\RustDedicated_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
     <Reference Include="Facepunch.UnityEngine">
       <HintPath>C:\rustserver\RustDedicated_Data\Managed\Facepunch.UnityEngine.dll</HintPath>
       <Private>False</Private>
@@ -114,7 +117,6 @@
     <Compile Include="Image\CustomImages.cs" />
     <Compile Include="Image\ImageLibrary.cs" />
     <Compile Include="Image\ImageStore.cs" />
-    <Compile Include="Image\RustSkinItem.cs" />
     <Compile Include="Image\RustSkinLibrary.cs" />
     <Compile Include="Image\RustyPipeImageStore.cs" />
     <Compile Include="Image\StreamedLibrary.cs" />

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using Newtonsoft.Json;
 using Oxide.Ext.RustyPipe.Plugin;
+using Steamworks;
 
 namespace Oxide.Ext.RustyPipe.Image
 {
@@ -52,7 +53,7 @@ namespace Oxide.Ext.RustyPipe.Image
                 RustyPipeDebug.LogWarning($"Unable to store custom image: {identifier}:{url}");
             }
         }
-        public RustSkinItem GetRustSkinData(int skinId)
+        public InventoryDef GetRustSkinData(int skinId)
         {
             return RustSkinLibrary.GetSkinData(skinId);
         }

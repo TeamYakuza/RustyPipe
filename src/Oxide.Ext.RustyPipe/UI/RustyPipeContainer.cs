@@ -30,14 +30,20 @@ namespace Oxide.Ext.RustyPipe.UI
 
             return default(T);
         }
-        
+        public void RefreshComponents()
+        {
+            Initialize();
+            foreach (var c in Components.ToArray())
+            {
+                c.RefreshComponent();
+            }
+        }
         public new T AddComponent<T>(string name = null) where T : RustyPipeUIComponent, new()
         {
             if (string.IsNullOrEmpty(name))
                 name = Guid.NewGuid().ToString();
             var r = new T { Parent = this, Name = name, Container = this };
             r.Initialize();
-            Console.WriteLine(r.Name);
             Components.Add(r);
             return r;
         }

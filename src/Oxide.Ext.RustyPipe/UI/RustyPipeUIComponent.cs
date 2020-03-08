@@ -36,6 +36,15 @@ namespace Oxide.Ext.RustyPipe.UI
         public virtual string Name { get; set; }
 
         internal abstract void Initialize();
+
+        public void RefreshComponent()
+        {
+            Initialize();
+            foreach (var c in Children.ToArray())
+            {
+                c.RefreshComponent();
+            }
+        }
         public BasePlayer Player
         {
             get { return Container.Player; }
