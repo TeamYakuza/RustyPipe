@@ -9,7 +9,7 @@ namespace Oxide.Ext.RustyPipe.UI
         public int PaddingTop { get; set; } = 0;
         public int PaddingLeft { get; set; } = 0;
 
-       
+        public bool RightToLeft { get; set; } = false;
         public void Expand()
         {
             int width = (ChildWidth + PaddingLeft) * Children.Count;
@@ -44,12 +44,18 @@ namespace Oxide.Ext.RustyPipe.UI
          
             Build(container);
             int x = PaddingLeft;
+            int paddingLeft = this.PaddingLeft;
+            if (this.RightToLeft)
+            {
+                paddingLeft = base.Width - this.PaddingLeft - this.ChildWidth;
+            }
             foreach (var c in Children.ToArray())
             {
                 c.Width = ChildWidth;
                 c.Height = ChildHeight;
-                c.X = x;
+                c.X = paddingLeft;
                 c.Y = PaddingTop;
+                paddingLeft = (!this.RightToLeft ? paddingLeft + this.PaddingLeft + c.Width : paddingLeft - (this.PaddingLeft + c.Width));
                 x += PaddingLeft + c.Width;
                 c.InternalBuild(container);
             }
