@@ -14,7 +14,7 @@ namespace Oxide.Ext.RustyPipe.UI
             
         }
 
-        public new BasePlayer Player { get; set; }
+        public BasePlayer Player { get; set; }
         public bool ShowCursor { get; set; }
 
         public new T FindComponent<T>(string name) where T:RustyPipeUIComponent
@@ -57,13 +57,22 @@ namespace Oxide.Ext.RustyPipe.UI
         {
             CuiHelper.DestroyUi(Hud.Player, Name);
         }
+        public void Hide(BasePlayer player)
+        {
+            CuiHelper.DestroyUi(player, Name);
+        }
         public void Show()
         {
             var elements= Build();
             CuiHelper.DestroyUi(Player, Name);
             CuiHelper.AddUi(Player, elements);
         }
-       
+        public void Show(BasePlayer player)
+        {
+            var elements = Build();
+            CuiHelper.DestroyUi(player, Name);
+            CuiHelper.AddUi(player, elements);
+        }
 
         public override void Build(CuiElementContainer container)
         {

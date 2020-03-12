@@ -45,11 +45,7 @@ namespace Oxide.Ext.RustyPipe.UI
                 c.RefreshComponent();
             }
         }
-        public BasePlayer Player
-        {
-            get { return Container.Player; }
-        }
-
+     
         public void FillParent()
         {
             X = 0;

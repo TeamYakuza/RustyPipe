@@ -33,7 +33,7 @@ namespace Oxide.Ext.RustyPipe.Image
             if (!ServerLoaded)
             {
                 CustomImageUrls[identifier] = url;
-                Save();
+               
                 return true;
             }
 

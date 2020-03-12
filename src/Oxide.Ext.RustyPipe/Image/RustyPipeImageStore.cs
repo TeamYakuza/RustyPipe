@@ -52,7 +52,7 @@ namespace Oxide.Ext.RustyPipe.Image
             {
                 RustIdentifiers[identifier] = id;
             }
-
+            Save();
             return id > 0;
         }
 
