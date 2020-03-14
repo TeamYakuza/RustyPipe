@@ -15,17 +15,20 @@ namespace Oxide.Ext.RustyPipe.Image
     {
         private ImageStore ItemThumbnails { get; set; }=new ImageStore();
         private CustomImages CustomImages { get; set; }=new CustomImages();
+        private CustomImageSet CustomImageSets { get; set; }=new CustomImageSet();
         private RustSkinLibrary RustSkinLibrary { get; set; } = new RustSkinLibrary();
 
         internal void Init()
         {
             CustomImages.Load();
+            CustomImageSets.Load();
         }
         internal void Load()
         {
             ItemThumbnails.Load();
             CustomImages.Prepare();
             RustSkinLibrary.Load();
+            CustomImageSets.Prepare();
         }
 
         /// <summary>
@@ -52,6 +55,19 @@ namespace Oxide.Ext.RustyPipe.Image
             {
                 RustyPipeDebug.LogWarning($"Unable to store custom image: {identifier}:{url}");
             }
+        }
+
+        /// <summary>
+        /// Adds the image set.
+        /// </summary>
+        /// <param name="url">The url of the zip archive containing the images to add.</param>
+        public void AddImageSet(string url)
+        {
+            if (!CustomImageSets.AddImage(url))
+            {
+                RustyPipeDebug.LogWarning($"Unable to store custom image set: {url}");
+            }
+          
         }
         public InventoryDef GetRustSkinData(int skinId)
         {

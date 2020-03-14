@@ -6,7 +6,6 @@ using Newtonsoft.Json;
 
 namespace Oxide.Ext.RustyPipe.Image
 {
-
     class CustomImages:RustyPipeImageStore
     {
         public string _comment =>

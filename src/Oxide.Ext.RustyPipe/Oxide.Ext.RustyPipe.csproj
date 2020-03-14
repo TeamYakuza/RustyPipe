@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Image\CustomImages.cs" />
+    <Compile Include="Image\CustomImageSet.cs" />
     <Compile Include="Image\ImageLibrary.cs" />
     <Compile Include="Image\ImageStore.cs" />
     <Compile Include="Image\RustSkinLibrary.cs" />
