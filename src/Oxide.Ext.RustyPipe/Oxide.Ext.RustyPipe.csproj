@@ -121,6 +121,8 @@
     <Compile Include="Image\RustSkinLibrary.cs" />
     <Compile Include="Image\RustyPipeImageStore.cs" />
     <Compile Include="Image\StreamedLibrary.cs" />
+    <Compile Include="Midi\MidiFile.cs" />
+    <Compile Include="Midi\MidiStreamer.cs" />
     <Compile Include="Plugin\RustyPipePlugin.cs" />
     <Compile Include="Plugin\RustyPipePluginLoader.cs" />
     <Compile Include="RustyPipe.cs" />

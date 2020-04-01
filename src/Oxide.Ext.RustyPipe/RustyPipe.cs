@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MidiParser;
 using Oxide.Ext.RustyPipe.Image;
+using Oxide.Ext.RustyPipe.Midi;
 using Oxide.Ext.RustyPipe.UI;
 using Oxide.Ext.RustyPipe.World;
 
@@ -23,6 +25,11 @@ namespace Oxide.Ext.RustyPipe
         /// A easier user interface system. It wraps around CUI
         /// </summary>
         public static RustyPipeUI Ui { get; private set; }
+
+        /// <summary>
+        /// A easier method to download a midi file and read it.
+        /// </summary>
+        public static MidiStreamer MidiStreamer { get; private set; }
         internal static void Init()
         {
             World = new RustyPipeWorld();
@@ -30,6 +37,8 @@ namespace Oxide.Ext.RustyPipe
             ImageLibrary=new ImageLibrary();
             ImageLibrary.Init();
             Ui = new RustyPipeUI();
+            MidiStreamer=new MidiStreamer();
+            
         }
     }
 }
