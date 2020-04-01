@@ -39,8 +39,10 @@ namespace Oxide.Ext.RustyPipe.Image
         public uint GetImage(string identifier)
         {
             var r = CustomImages.GetImage(identifier);
+            if (r == 0) r = CustomImageSets.GetImage(identifier);
             if (r == 0) r = ItemThumbnails.GetImage(identifier);
             if (r == 0) r = ItemThumbnails.GetImage("none");
+
             return r;
         }
 

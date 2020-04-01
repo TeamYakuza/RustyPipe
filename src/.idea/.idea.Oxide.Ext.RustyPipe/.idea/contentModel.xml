@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Ultimation\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ultimation\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Oxide.Ext.RustyPipe.-10345930.00" t="ExcludeRecursive" />
+    <e p="E:\Team Yakuza taken\2019\Rust\Oxide.Ext.RustyPipe\src" t="IncludeFlat">
+      <e p="Oxide.Ext.RustyPipe" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Image" t="Include">
+          <e p="CustomImages.cs" t="Include" />
+          <e p="CustomImageSet.cs" t="Include" />
+          <e p="ImageLibrary.cs" t="Include" />
+          <e p="ImageStore.cs" t="Include" />
+          <e p="RustSkinLibrary.cs" t="Include" />
+          <e p="RustyPipeImageStore.cs" t="Include" />
+          <e p="StreamedLibrary.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Oxide.Ext.RustyPipe.csproj" t="IncludeRecursive" />
+        <e p="Plugin" t="Include">
+          <e p="RustyPipePlugin.cs" t="Include" />
+          <e p="RustyPipePluginLoader.cs" t="Include" />
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RustyPipe.cs" t="Include" />
+        <e p="RustyPipeDebug.cs" t="Include" />
+        <e p="RustyPipeExtension.cs" t="Include" />
+        <e p="UI" t="Include">
+          <e p="IRustyPipeTheme.cs" t="Include" />
+          <e p="RustyPipeButton.cs" t="Include" />
+          <e p="RustyPipeContainer.cs" t="Include" />
+          <e p="RustyPipeGridComponent.cs" t="Include" />
+          <e p="RustyPipeHorizontalLayoutComponent.cs" t="Include" />
+          <e p="RustyPipeHud.cs" t="Include" />
+          <e p="RustyPipeInput.cs" t="Include" />
+          <e p="RustyPipeLabel.cs" t="Include" />
+          <e p="RustyPipeTheme.cs" t="Include" />
+          <e p="RustyPipeUI.cs" t="Include" />
+          <e p="RustyPipeUIComponent.cs" t="Include" />
+          <e p="RustyPipeUIImage.cs" t="Include" />
+          <e p="RustyPipeUIPanel.cs" t="Include" />
+          <e p="RustyPipeVerticalLayoutComponent.cs" t="Include" />
+        </e>
+        <e p="World" t="Include">
+          <e p="RustyPipeWorld.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Oxide.Ext.RustyPipe.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
