@@ -38,8 +38,8 @@ namespace Oxide.Ext.RustyPipe.Image
         /// <returns>The streaming identifier</returns>
         public uint GetImage(string identifier)
         {
-            var r = CustomImages.GetImage(identifier);
-            if (r == 0) r = CustomImageSets.GetImage(identifier);
+            var r = CustomImageSets.GetImage(identifier);
+            if (r == 0) r = CustomImages.GetImage(identifier);
             if (r == 0) r = ItemThumbnails.GetImage(identifier);
             if (r == 0) r = ItemThumbnails.GetImage("none");
 
