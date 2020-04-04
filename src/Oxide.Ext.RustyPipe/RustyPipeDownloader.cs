@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -26,6 +27,33 @@ namespace Oxide.Ext.RustyPipe
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Download and save a file
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="localPathToSave">Example: oxide/plugins/mydata.cs</param>
+        /// <returns></returns>
+        public bool DownloadFile(string url,string localPathToSave)
+        {
+            using (var c = new WebClient())
+            {
+                try
+                {
+                    var data= c.DownloadData(url);
+                    if (data != null)
+                    {
+                        File.WriteAllBytes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,localPathToSave),data);
+                    }
+                }
+                catch (Exception)
+                {
+                    //e
+                }
+            }
+
+            return false;
         }
 
         public byte[] DownloadData(string url)
