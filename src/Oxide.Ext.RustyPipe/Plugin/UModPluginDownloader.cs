@@ -29,7 +29,7 @@ namespace Oxide.Ext.RustyPipe.Plugin
                     var pluginData = RustyPipe.Downloader.HttpGetJson<UModPluginData>(path);
                     if (pluginData != null)
                     {
-                        var localFilename = "HumanNpc.cs";
+                        var localFilename = Path.GetFileName(pluginData.download_url);
                         var downloaded = RustyPipe.Downloader.DownloadFile(pluginData.download_url, "oxide/plugins/" + localFilename);
                         if (downloaded)
                         {
