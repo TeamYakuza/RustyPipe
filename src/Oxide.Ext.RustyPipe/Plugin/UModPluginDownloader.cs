@@ -17,7 +17,7 @@ namespace Oxide.Ext.RustyPipe.Plugin
 
         }
 
-        [ConsoleCommand("umod.install")]
+        [ConsoleCommand("rustypipe.install")]
         void InstallPlugin(ConsoleSystem.Arg ar)
         {
             if (ar.IsRcon || ar.IsServerside)
