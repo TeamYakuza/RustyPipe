@@ -126,6 +126,7 @@
     <Compile Include="Plugin\RustyPipePlugin.cs" />
     <Compile Include="Plugin\RustyPipePluginLoader.cs" />
     <Compile Include="RustyPipe.cs" />
+    <Compile Include="RustyPipeDownloader.cs" />
     <Compile Include="RustyPipeExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RustyPipeDebug.cs" />

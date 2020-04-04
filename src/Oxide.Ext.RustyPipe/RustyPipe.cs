@@ -30,6 +30,12 @@ namespace Oxide.Ext.RustyPipe
         /// A easier method to download a midi file and read it.
         /// </summary>
         public static MidiStreamer MidiStreamer { get; private set; }
+
+
+        /// <summary>
+        /// Easy method for downloading a file,string or json.
+        /// </summary>
+        public static RustyPipeDownloader Downloader { get; private set; }
         internal static void Init()
         {
             World = new RustyPipeWorld();
@@ -38,7 +44,7 @@ namespace Oxide.Ext.RustyPipe
             ImageLibrary.Init();
             Ui = new RustyPipeUI();
             MidiStreamer=new MidiStreamer();
-            
+            Downloader=new RustyPipeDownloader();
         }
     }
 }
