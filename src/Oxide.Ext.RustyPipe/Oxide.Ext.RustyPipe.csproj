@@ -49,6 +49,9 @@
       <HintPath>C:\rustserver\RustDedicated_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Facepunch.Console">
+      <HintPath>C:\rustserver\RustDedicated_Data\Managed\Facepunch.Console.dll</HintPath>
+    </Reference>
     <Reference Include="Facepunch.Network">
       <HintPath>C:\rustserver\RustDedicated_Data\Managed\Facepunch.Network.dll</HintPath>
       <Private>False</Private>
@@ -125,6 +128,8 @@
     <Compile Include="Midi\MidiStreamer.cs" />
     <Compile Include="Plugin\RustyPipePlugin.cs" />
     <Compile Include="Plugin\RustyPipePluginLoader.cs" />
+    <Compile Include="Plugin\UModPluginData.cs" />
+    <Compile Include="Plugin\UModPluginDownloader.cs" />
     <Compile Include="RustyPipe.cs" />
     <Compile Include="RustyPipeDownloader.cs" />
     <Compile Include="RustyPipeExtension.cs" />

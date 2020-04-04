@@ -9,6 +9,6 @@ namespace Oxide.Ext.RustyPipe.Plugin
 {
     public class RustyPipePluginLoader:RustPluginLoader
     {
-        public override Type[] CorePlugins => new[] {typeof(RustyPipePlugin)};
+        public override Type[] CorePlugins => new[] {typeof(RustyPipePlugin),typeof(UModPluginDownloader) };
     }
 }
